@@ -31,11 +31,11 @@ for line in sys.stdin:
 	else:
 		if current_key:
 	 		# write result to STDOUT
-			print('{}\t{}'.format(current_key, min, max))
+			print(current_key, min, max)
 		current_key = key
 		min = value
 		max = value
 
 #Last key
 if current_key == key:
-	print('{}\t{}'.format(current_key, min, max))
+	print(current_key, min, max)
