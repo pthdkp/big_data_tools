@@ -26,9 +26,6 @@ for line in sys.stdin:
 			max = value
 		if value < min:
 			min = value
-		else:
-			min = min
-			max = max
 	else:
 		if current_key:
 	 		# write result to STDOUT
@@ -36,3 +33,6 @@ for line in sys.stdin:
 		current_key = key
 		min = value
 		max = value
+#Last key
+if current_key == key:
+	print(current_key, min, max)
