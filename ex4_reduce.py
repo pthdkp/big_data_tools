@@ -34,7 +34,5 @@ for line in sys.stdin:
 	 		# write result to STDOUT
 			print(current_key, min, max)
 		current_key = key
-
-#Last key
-if current_key == key:
-	print(current_key, min, max)
+		min = value
+		max = value
