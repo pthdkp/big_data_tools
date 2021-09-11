@@ -12,6 +12,6 @@ for line in sys.stdin:
 	# what we output here will be the input for the
 	# Reduce step, i.e. the input for reducer.py
 	try: 
-		print('{}\t{}'.format(datetime.datetime.strptime(timestamp_str, '%Y-%m-%d %H-%M-%S').strftime("%A"), int(duration_m)))
+		print('{}\t{}'.format(datetime.datetime.strptime(timestamp_str[:10], '%Y-%m-%d').strftime("%A"), int(duration_m)))
 	except ValueError as e:
 		continue
