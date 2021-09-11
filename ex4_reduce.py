@@ -22,9 +22,10 @@ for line in sys.stdin:
 	# this IF-switch only works because Hadoop sorts map output
 	# by key (here: word) before it is passed to the reducer
 	if current_key == key:
-		if value > min:
-			if value > max:
-				max = value
+		if value > max:
+			max = value
+		if value < min:
+			min = value
 		else:
 			min = min
 			max = max
